@@ -22,6 +22,10 @@ class InfoController < ApplicationController
     end
   end
 
+  def logput_get
+    logout
+  end
+
   def logout
     session[:user] = nil
     redirect_to login_path
