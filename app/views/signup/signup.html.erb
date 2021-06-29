@@ -1,0 +1,26 @@
+<div class="d-flex justify-content-center">
+  <h1><strong>Signup page</strong></h1>
+</div>
+<div class="card row">
+  <div class="card-body">
+    <form id="signup-form" action="http://0.0.0.0:3000/signup" method="post">
+      <div class="col-4 offset-4">
+        Username: <input id="user" type="text" name="user" class="form-control">
+      </div>
+      <div class="col-4 offset-4 mt-3">
+        Password: <input id="pass1" type="password" name="pass" class="form-control">
+      </div>
+      <div class="col-4 offset-4 mt-3">
+        Re-enter password: <input id="pass2" type="password" class="form-control">
+      </div>
+    </form>
+    <div class="col-4 offset-4 mt-3">
+      <%= link_to "Back", login_path, class: "btn btn-primary float-start" %>
+      <button id="submit-signup-form" class="btn btn-primary float-end">Signup</button>
+    </div>
+    <div class="col-4 offset-4 mt-10">
+      <p class="col-4 offset-4 mt-3" id="notice"></p>
+    </div>
+  </div>
+</div>
+<%= javascript_pack_tag "signup" %>
