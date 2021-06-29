@@ -5,6 +5,6 @@ class LoginController < ApplicationController
 
   def create_session
     session[:user] = params[:user]
-    redirect_to infor_path
+    redirect_to info_path
   end
 end
