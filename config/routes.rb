@@ -9,4 +9,5 @@ Rails.application.routes.draw do
   get "info/logout"
   post "edit" => "edit#edit"
   get "edit" => "edit#edit_get"
+  post "edit/send_data"
 end

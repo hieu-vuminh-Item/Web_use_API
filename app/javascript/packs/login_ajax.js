@@ -11,7 +11,6 @@ $('#submit-login-form').click(function () {
             $('#notice').text(data.message);
             if (data.status == "SUCCESS") {
                 user = data.data;
-                console.log(data.data);
                 submit_to_controller(data.data)
             }
         },
