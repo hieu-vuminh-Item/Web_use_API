@@ -4,7 +4,7 @@ class LoginController < ApplicationController
   end
 
   def create_session
-    session[:user] = params[:user]
+    session[:token] = params[:user]
     redirect_to info_path
   end
 end

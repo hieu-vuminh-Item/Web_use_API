@@ -1,6 +1,6 @@
 $('#submit-edit-form').click(function () {
     $.ajax({
-        url: "http://0.0.0.0:3000/update",
+        url: "/edit/send_data",
         type: "post",
         data: {
             "user": user,
@@ -9,28 +9,9 @@ $('#submit-edit-form').click(function () {
             "status": $('#status').val()
         },
         success: function (data) {
-            alert(data.message);
-            if (data.status == 'SUCCESS') {
-                submit_to_controller(user, $('#status').val());
-            }
         },
         error: function (data) {
             $('#notice').text(data.message);
         }
     });
 });
-
-function submit_to_controller (user, status) {
-    $.ajax({
-        url: "/check_update",
-        type: "post",
-        data: {
-            "user": user,
-            "status": status
-        },
-        success: function (data) {
-        },
-        error: function (data) {
-        }
-    })
-};
