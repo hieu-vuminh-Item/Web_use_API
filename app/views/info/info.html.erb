@@ -6,9 +6,9 @@
     <div class="col-3 offset-4">
       Username: <%= @a["username"] %>
     </div>
-    <div class="col-3 offset-4">
-      Password: <%= @a["password"] %>
-    </div>
+<!--    <div class="col-3 offset-4">-->
+<!--      Password: <%#= @a["password"] %>-->
+<!--    </div>-->
     <div class="col-3 offset-4">
       Role: <%= @role_name %>
     </div>
@@ -23,7 +23,7 @@
     </div>
   </div>
 </div>
-<% if @a["role_id"] == 1 %>
+<% if @role_admin.include? @a["role_id"] %>
   <div class="card row">
     <div class="card-body row">
       <div class="col-3 offset-4">

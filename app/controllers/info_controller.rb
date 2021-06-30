@@ -19,6 +19,7 @@ class InfoController < ApplicationController
       @role_name = temp["role_name"]
       @status_name = temp["status_name"]
       @listacc = temp["list"]
+      @role_admin = temp["roleadmin"]
     end
   end
 
